@@ -2,7 +2,7 @@
 Library  SeleniumLibrary
 Documentation  Suite description #automated tests for scout website
 *** Variables ***
-${LOGIN URL}        https://scouts-test.futbolkolektyw.pl/en
+${LOGIN URL}        https://scouts.futbolkolektyw.pl/en
 ${BROWSER}      Chrome
 ${SIGNINBUTTON}     xpath=//*/button[contains(@ class, 'MuiButton')]
 ${EMAILINPUT}       xpath=//*[@id='login']
@@ -30,7 +30,7 @@ Click on the Signin button
     Click Element       xpath=//*/button[contains(@ class, 'MuiButton')]
 Assert dashboard
     Wait Until Element Is Visible       ${PAGELOGO}
-    Title Should Be    Scouts panel
+    Title Should Be    PANEL SKAUTINGOWY
     Capture Page Screenshot    alert.png
 
 
